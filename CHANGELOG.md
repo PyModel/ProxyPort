@@ -1,5 +1,34 @@
 # Changelog
 
+## 0.1.3 — 2026-10-21
+
+### Fixed
+- The terminal's Keys page lists L for Show log
+- One-line rows show which agent started each server
+- CPU alerts count one full core as 100%, as the list does, not the whole Mac
+- Stops that leave processes running, and windows that can't open, say so
+- Open uses https and the server's own address, and is off for databases
+- Restart logs stop growing past 10 MB
+- The app and proxyport never stop or restart one server at the same time
+- CPU alerts wait 5 minutes, so a long build doesn't set one off
+
+### Highlights
+- proxyport restart, stop --dry-run, clearer exit codes and richer JSON
+- proxyport wait for a server to answer, and next for a free port
+- proxyport logs prints or follows what a server writes
+- proxyport list --json --watch prints a line each time the list changes
+- Ports can be named, from a row's menu or proxyport name
+- proxyport install hooks stops a Claude session's servers when it exits
+- proxyport mcp gives coding agents ProxyPort's tools over MCP
+- Containers show a failing health check and how often Docker restarted them
+- Open uses portless's .localhost name for a server portless routes
+- One project's servers sit together; the same app run twice says so
+- proxyport completion for zsh, bash and fish; clearer, grouped help
+
+### Improved
+- Better with Increase Contrast and Differentiate Without Color on
+- Scans slow down while the popover is closed and pause while the Mac sleeps
+
 ## 0.1.2 — 2026-10-20
 
 ### Fixed

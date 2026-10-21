@@ -6,7 +6,7 @@
   <img src="docs/assets/badges/macos.svg" alt="macOS 14+" height="28">
   <img src="docs/assets/badges/swift.svg" alt="Swift 5.9+" height="28">
   <img src="docs/assets/badges/swiftui.svg" alt="SwiftUI menu bar app" height="28">
-  <img src="docs/assets/badges/version.svg" alt="Version 0.1.2" height="28">
+  <img src="docs/assets/badges/version.svg" alt="Version 0.1.3" height="28">
   <img src="docs/assets/badges/license.svg" alt="License: proprietary" height="28">
   <img src="docs/assets/badges/telemetry.svg" alt="No telemetry" height="28">
   <img src="docs/assets/badges/terminal.svg" alt="Terminal UI: proxyport" height="28">
@@ -68,16 +68,28 @@ ProxyPort sends a notification when a server goes over your memory limit (2 GB b
 The same servers are available in the terminal. Add the command from Settings → General → Terminal, then:
 
 ```bash
-proxyport               # browse, open and stop servers (press ? for keys)
-proxyport list          # print servers and exit (exit 1 if the scan stalls or fails)
-proxyport list --json   # the same, as JSON, for scripts and agents (--redact hides arguments, paths, titles)
-proxyport list --all    # also other listeners and background containers, and why they aren't servers
-proxyport 3000          # the details of the server on :3000 (--json too)
-proxyport stop 3000     # stop it (several ports or a range such as 3000-3010 work too)
+proxyport                      # browse, open and stop servers (press ? for keys)
+proxyport list                 # print servers and exit (exit 75 if the scan stalls or fails: try again)
+proxyport list --json          # the same, as JSON, for scripts and agents (--redact hides arguments, paths, titles)
+proxyport list --json --watch  # a line of JSON each time the list changes
+proxyport list --all           # also other listeners and background containers, and why they aren't servers
+proxyport 3000                 # the details of the server on :3000 (--json too)
+proxyport stop 3000            # stop it (several ports or a range such as 3000-3010; --dry-run shows the plan)
+proxyport restart 3000         # rerun its command in its folder
+proxyport logs 3000 -f         # follow what it writes
+proxyport name 3000 storefront # name the port; the name shows in place of the project
+proxyport wait 3000 --http /health  # block until it answers (agents: instead of sleeping)
+proxyport next 3000            # the first free port from 3000
+proxyport completion zsh       # shell completion (bash and fish too)
 proxyport --version
 ```
 
 It shares settings with the menu bar app.
+
+#### For coding agents
+
+- `proxyport install hooks` adds a Claude Code SessionEnd hook: when a session exits, the servers it started stop (not on `/clear` or `/resume`). `--print` shows it, `--remove` takes it out. By hand: `proxyport stop --session <id>` or `--agent claude-code`.
+- `proxyport mcp` serves ProxyPort's tools over MCP: list and inspect servers, a free port, wait for a port, a server's logs, and Stop for the agent's own servers (another one only with the user's say-so). `proxyport install mcp` prints how to add it to Claude Code, Cursor or Codex.
 
 ### Settings
 
