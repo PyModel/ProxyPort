@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: License or billing
+    url: https://proxyport.pymodel.com/account
+    about: Manage your license and renewal privately. Don't post license keys here.
+  - name: Docs
+    url: https://proxyport.pymodel.com/docs
+    about: How ProxyPort works, its settings and the proxyport command.
+  - name: Security problem
+    url: https://github.com/PyModel/ProxyPort/security/advisories/new
+    about: Report it privately, not in a public issue.
