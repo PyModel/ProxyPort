@@ -1,0 +1,53 @@
+ProxyPort License Agreement
+
+Copyright (c) 2026 PyModel LLC. All rights reserved.
+
+ProxyPort (the "Software") is proprietary software owned by PyModel LLC
+("PyModel"). It is licensed, not sold. By installing or using the Software you
+agree to these terms.
+
+1. License. Subject to these terms and to payment of the applicable fee,
+   PyModel grants you a non-exclusive, non-transferable license to install and
+   use the Software, activated with a valid license key, on one Mac at a time,
+   for the term of that license key (for example, one year from purchase). You
+   may move the license to another Mac you use by deactivating it on the
+   first.
+
+2. Restrictions. Except as permitted by applicable law notwithstanding this
+   limitation, you may not: (a) copy, sell, rent, lease, sublicense, publish or
+   distribute the Software or a license key; (b) reverse engineer, decompile or
+   disassemble the Software; (c) remove, disable or circumvent its license
+   activation or any other technical protection; (d) modify the Software or
+   create derivative works of it; or (e) share a license key or activate it on
+   more Macs than it allows.
+
+3. Source code. The source code of the Software is confidential and is not
+   licensed to you by this agreement.
+
+4. Third-party components. The Software includes third-party components that
+   are licensed under their own terms, listed in THIRD_PARTY_NOTICES.md. Those
+   terms govern those components.
+
+5. Activation and updates. The Software contacts PyModel's licensing provider
+   (Polar) to activate, check and deactivate a license key, and PyModel's
+   update server to check for and download updates. Apart from the license key,
+   an activation id, a one-way hash identifying the Mac, the Mac's model and the
+   app's version, no information about you or your use of the Software is sent.
+
+6. Termination. This license ends automatically at the end of the license
+   key's term, on refund or chargeback of its purchase, or if you breach these
+   terms. When it ends, you must stop using the Software.
+
+7. No warranty. THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY
+   KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+   MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+
+8. Limitation of liability. TO THE MAXIMUM EXTENT PERMITTED BY LAW, IN NO
+   EVENT SHALL PYMODEL BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL,
+   CONSEQUENTIAL OR PUNITIVE DAMAGES, OR FOR ANY LOSS OF DATA, PROFITS OR
+   REVENUE, ARISING OUT OF OR RELATED TO THE SOFTWARE. PYMODEL'S TOTAL
+   LIABILITY SHALL NOT EXCEED THE AMOUNT YOU PAID FOR THE LICENSE.
+
+9. General. If any provision of this agreement is held unenforceable, the rest
+   remains in effect. Nothing in this agreement limits rights you have under
+   consumer protection law that cannot be waived.

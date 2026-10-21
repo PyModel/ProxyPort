@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="121" height="28" viewBox="0 0 121 28" role="img" aria-label="Swift: 5.9+">
+  <title>Swift: 5.9+</title>
+  <clipPath id="r"><rect width="121" height="28" rx="14"/></clipPath>
+  <g clip-path="url(#r)">
+    <rect width="64" height="28" fill="#1D1F25"/>
+    <rect x="64" width="57" height="28" fill="#F05138"/>
+  </g>
+  <rect x="0.5" y="0.5" width="120" height="27" rx="13.5" fill="none" stroke="#FFFFFF" stroke-opacity="0.12"/>
+  <g font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="12" font-weight="600" text-anchor="middle">
+    <text x="32.0" y="18" fill="#EBEBF5" fill-opacity="0.85">Swift</text>
+    <text x="92.5" y="18" fill="#FFFFFF">5.9+</text>
+  </g>
+</svg>
