@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.6 — 2026-10-22
+
+### Improved
+- License checks go through proxyport.pymodel.com, which signs Polar's answers so a fake license server can't unlock the app
+
 ## 0.1.5 — 2026-10-22
 
 ### Highlights
