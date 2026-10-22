@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.1.5 — 2026-10-22
+
+### Highlights
+- Updates show in Settings → General with real download progress, release notes and Install and Relaunch
+- The popover and the menu bar icon's menu show an update as soon as the daily check finds one
+
+### Fixed
+- The popover stays under the icon when the count goes, and Quit no longer takes focus from a stopped server's row
+- The menu bar icon keeps its place when the server count appears or goes
+
+### Improved
+- Sparkle 2.9.5, with its symlink security fix
+
 ## 0.1.4 — 2026-10-22
 
 ### Highlights
