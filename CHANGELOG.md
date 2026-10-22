@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.1.4 — 2026-10-22
+
+### Highlights
+- About links to ProxyPort on GitHub and to report an issue there
+- Onboarding asks for notifications as its alerts step opens, so alerts are on by default
+- Settings → Alerts shows where macOS lets alerts appear, as System Settings does
+
+### Improved
+- Notification Settings buttons open ProxyPort's own page in System Settings
+
 ## 0.1.3 — 2026-10-21
 
 ### Fixed
