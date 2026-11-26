@@ -1,5 +1,19 @@
 # Changelog
 
+## 0.1.8 — 2026-11-26
+
+### Highlights
+- Keep Awake in Settings → General and the menu bar icon's menu, with manual timers, automatic holds while Claude Code, Codex, Pi or OpenCode is working, and timed holds for `proxyport awake` and MCP clients
+- See local headless Chrome browsers, their launchers and resource use in the popover, terminal and `proxyport list --all`.
+
+### Improved
+- `proxyport awake status`, `acquire`, `renew` and `release`, plus the `awake_*` MCP tools, let scripts and agents hold a Mac awake without owning an assertion
+- Open and Copy URL preserve the listener’s IP address. Use Set Browser URL to remember a page for one service without affecting another service on the same port.
+
+### Fixed
+- Keep coding sessions out of server Stop, Restart and Clean Up. Their own ports appear in `proxyport list --all`; dev servers they launch stay independently manageable.
+- Stop and Restart are no longer refused as "already stopping or restarting" while ProxyPort is starting one of its helper tools
+
 ## 0.1.6 — 2026-10-22
 
 ### Improved
