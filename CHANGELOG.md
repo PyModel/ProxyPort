@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.1.11 — 2026-11-27
+
+### Improved
+- ProxyPort unlocks only with a license answer its license server signed; a license saved without one is checked again before ProxyPort opens
+
+### Fixed
+- The popover closes when you click the menu bar or anywhere outside it while another app is in front, instead of staying open
+
 ## 0.1.10 — 2026-11-27
 
 ### Highlights
