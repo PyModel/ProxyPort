@@ -1,5 +1,51 @@
 # Changelog
 
+## 0.1.10 — 2026-11-27
+
+### Highlights
+- The popover lists Other listeners: every port something listens on that isn't shown as a server, with the reason, including ports outside the scanned range
+
+### Improved
+- Servers on ports from 1024 up, such as Hugo's 1313 and Parcel's 1234, show by default; `proxyport next` still suggests ports from 3000
+- Each scan takes less work: ProxyPort no longer reads the CPU temperature while the Temperature card is off, works out which app owns a process once instead of every scan, and redraws the menu bar icon once per scan
+- After a `gh` pull request lookup times out, ProxyPort waits before trying it again
+- Details stays responsive while you hover its charts, and warning amber, the memory chart's alert label and About's copyright line are easier to read
+
+### Fixed
+- A license ProxyPort couldn't read from a locked keychain is read again once the keychain opens, instead of asking you to activate
+- When the license can't be saved to the keychain, activating again reuses that activation instead of using up another
+- A license check that fails is tried again within the hour instead of a day later
+- Always show in the terminal UI no longer undoes one made in the app, and the app picks up allowlist and port range changes made from the terminal
+- A tool that connects to Keep Awake and sends nothing no longer holds up other tools' requests
+- Dev servers run by Xcode's Python, such as `python3 -m http.server`, show in the list instead of being hidden as an app's own backend
+- `proxyport next` and the `free_port` MCP tool no longer offer a port another user's process holds on a network address, such as Tailscale's
+- A port range saved out of order, such as by `defaults write`, no longer crashes ProxyPort at launch
+- Keep Awake works on a desktop Mac plugged into a UPS instead of stopping with "power unknown"
+- Stop and Restart say why they did nothing while the port list can't be read, instead of doing nothing silently
+- Automatic Clean Up still suggests the containers it never stops on its own
+- Servers started from nushell, tcsh, ksh, PowerShell, Elvish or xonsh show up, marked Unlisted
+- A debugger port set through `NODE_OPTIONS` or `JAVA_TOOL_OPTIONS` is no longer taken for the server's own port
+- A server started by a build daemon, such as a Gradle task, shows as its own server instead of inside the daemon, and a server started by a process ProxyPort doesn't list is no longer hidden with it
+- Your own builds left running in the background (`nohup ./server &`) or started from an IDE's debugger show up from their project folder, marked Unlisted
+- A container on the host network (`--net host`) shows on the ports it serves instead of only as a background container
+- Gradle's build daemon and the Kotlin compile daemon no longer show as servers; they're listed under Other listeners
+- Details shows why a Stop or Restart failed, as the list does, and scrolls a long process list instead of pushing its buttons off the screen
+- The menu bar icon's tooltip says what's running and whether Keep Awake is on
+- Search no longer says "No matches" above background containers, headless browsers or other listeners that match
+- A memory bar highlight no longer sticks after the container or app it pointed at goes away, and a new server starting no longer takes keyboard focus off the list
+- The CPU chart in Details keeps its bars apart at short scan intervals
+- Settings → Ports says what still shows up when no process names are listed
+- `proxyport` no longer passes a project's terminal escape codes from a folder, branch or process name through to your terminal
+- `proxyport <port>`, `proxyport logs` and the MCP `get_server` and `server_logs` tools name the servers sharing a port instead of picking one
+- The MCP server answers a request sent as the last line without a newline, and no longer exits before its replies are written
+- MCP `server_logs` includes what a container wrote to stderr
+- MCP tools refuse a bad `from`, `count` or `lines` instead of quietly using another value, `awake_acquire` and `awake_renew` accept `seconds: 1`, and a malformed request gets the right JSON-RPC error
+- `proxyport` exits with a write error instead of being killed when the reader of its output goes away
+- `proxyport list --json --watch` no longer prints an empty list before the first scan
+- `proxyport stop` reports a port named twice, or inside a range, once, and `--identity` no longer swallows the option after it
+- `proxyport list --json --all` gives headless browsers' start time as a date and rounds their CPU like the rest
+- `proxyport wait` says a fractional timeout as given ("after 0.5 s") instead of "after 0 s"
+
 ## 0.1.9 — 2026-11-27
 
 ### Improved
