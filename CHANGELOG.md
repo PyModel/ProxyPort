@@ -1,5 +1,30 @@
 # Changelog
 
+## 0.1.9 — 2026-11-27
+
+### Improved
+- The popover, Details, the terminal UI and `proxyport restart` offer the same server actions under the same names, say the same thing about a Restart outside its agent's session, and title a server by its port name when it has one
+- Memory by app counts Codex, Pi and other coding agents that run through Node toward the agent, not toward "node"
+- The menu bar popover opens fresh every time: on the list, with no search, Clean Up, armed Stop or highlight left from the last visit
+- Search matches names without regard to case or accents, and VoiceOver can open a server from its memory bar segment and names Details' More actions menu
+
+### Fixed
+- Onboarding counts the tools it checks correctly: "1 of 3 found", not "of 4"
+- `proxyport install hooks` leaves Claude Code's settings untouched when it can't save their backup first
+- `proxyport next` and the `free_port` MCP tool no longer report ports as free when macOS returns an incomplete socket list
+- Allowlist changes made with the `proxyport` command now reach the app
+- Restart no longer reads a free port as busy while ProxyPort is starting a helper tool
+- `proxyport <port>` shows the Allowlist and Traffic rows Details shows
+- Settings → Alerts says why Allow… failed when macOS couldn't ask for notifications
+- The menu bar icon's right-click menu no longer offers an empty Open in Browser, and its Settings… opens on License while ProxyPort is locked
+- A server appearing no longer takes keyboard focus away from Settings
+- A server row with no room for its branch hides it instead of showing a sliver
+- Settings → Keep Awake says why a manual timer didn't start, and a failed Show log or Resume no longer greets the next popover
+- Pressed buttons darken again; a press looked the same as a hover
+- A refused license key stays in the field instead of being cleared
+- VoiceOver names the alert threshold fields, the idle clean up picker and agent icons, says whether "more" is expanded, and stops reading decorative icons
+- Force Quit After reads "1 second", not "1 seconds"
+
 ## 0.1.8 — 2026-11-26
 
 ### Highlights
