@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.1.12 — 2026-11-27
+
+### Improved
+- ProxyPort keeps unlocking if its license server switches to a new signing key
+
+### Fixed
+- Only a ProxyPort in Applications can add the `proxyport` command, so the command never points at a copy that's later moved or deleted
+
 ## 0.1.11 — 2026-11-27
 
 ### Improved
